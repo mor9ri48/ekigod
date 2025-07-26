@@ -114,8 +114,20 @@ button {
 .station-sign.metro .line-bar::after { font-size: 1.5em; }
 .station-sign.metro .adjacent-stations { display: none; }
 
-
 /* === 駅名標のデザイン ここまで === */
+
+#initial-routemap-container {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#initial-routemap-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
 #spin-again-button {
     margin-top: 20px;
