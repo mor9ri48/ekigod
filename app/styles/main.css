@@ -1,109 +1,130 @@
+/* Google FontsからNoto Sans JPをインポート */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
 /* 基本スタイル */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-    line-height: 1.6;
+    /* Noto Sans JPを基本フォントに設定 */
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.7;
     margin: 0;
     padding: 20px;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: #fdfaf4;
+    color: #4a4a4a;
 }
-
 .container {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    padding: 25px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
 }
-
 header {
     text-align: center;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
 }
-
 h1 {
-    font-size: 1.8em;
-    color: #007bff;
+    font-size: 2em;
+    color: #2c3e50;
     margin: 0;
+    font-weight: 700;
 }
 
-h2 {
-    font-size: 1.4em;
-    margin-top: 0;
+/* ボタンと結果エリアのスタイル */
+#control-area {
+    text-align: center;
+    margin-bottom: 30px;
 }
-
-/* フォームとボタン */
-.form-group {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
 button {
-    width: 100%;
-    padding: 12px;
-    font-size: 1.2em;
+    padding: 15px 30px;
+    font-size: 1.3em;
     font-weight: bold;
     color: #fff;
-    background-color: #007bff;
+    background-color: #e67e22;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    font-family: 'Noto Sans JP', sans-serif; /* ボタンにもフォントを適用 */
+}
+#result-area {
+    margin-top: 20px;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
+/* === 駅名標のデザイン ここから === */
 
-/* 結果表示 */
-#result-view h2 {
+/* --- 全デザイン共通のベース --- */
+.station-sign {
+    background-color: #fff;
+    padding: 10px 15px;
     text-align: center;
-    color: #555;
-}
-
-#station-name {
-    font-size: 2.5em;
-    text-align: center;
-    margin: 20px 0;
-    color: #d9534f;
-}
-
-.routemap-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#routemap-image {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ddd;
+    transition: all 0.3s ease; /* 枠組みの切り替わりをスムーズに */
     border-radius: 4px;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* ... (kanji-name, hiragana-nameなどの他のベーススタイルは変更なし) ... */
+.station-name-main { margin-bottom: 5px; }
+.kanji-name { font-size: 3.8em; font-weight: 900; line-height: 1.1; letter-spacing: 2px; }
+.hiragana-name { font-size: 1.2em; font-weight: 500; }
+.line-bar { padding: 5px 0; margin-bottom: 5px; display: flex; align-items: center; justify-content: space-between; }
+.line-bar::after { content: '→'; font-size: 1.8em; font-weight: bold; }
+.romaji-name { font-size: 1.5em; font-weight: 700; padding-left: 15px; }
+.adjacent-stations { display: flex; justify-content: space-between; font-size: 1em; padding: 5px; margin-top: auto; }
+.adjacent-stations .station-kanji { font-size: 1.4em; font-weight: 700; }
+.adjacent-stations .station-romaji { font-size: 0.8em; font-weight: 500; }
+.is-rouletting .kanji-name,
+.is-rouletting .hiragana-name {
+    filter: blur(2px);
+    opacity: 0.8;
+}
+
+/* --- 待機中デザイン (.waiting-design) --- */
+.station-sign.waiting-design {
+    border: 3px dashed #ccc; /* 点線のシンプルな枠 */
+}
+.station-sign.waiting-design .adjacent-stations {
+    display: none; /* 待機中は隣の駅を表示しない */
+}
+
+/* --- JR東日本風 (.jr) --- */
+.station-sign.jr {
+    border: 3px solid #333;
+}
+
+/* --- 東京メトロ・都営風 (.metro) --- */
+.station-sign.metro {
+    border: 1px solid #999;
+    border-top: 10px solid #00529B;
+    border-radius: 6px;
+}
+.station-sign.metro .kanji-name { font-weight: 700; }
+.station-sign.metro .hiragana-name,
+.station-sign.metro .romaji-name { font-family: sans-serif; }
+.station-sign.metro .line-bar {
+    border-radius: 999px;
+    padding: 2px 10px;
+    margin: 10px 5px;
+}
+.station-sign.metro .romaji-name { font-size: 1.2em; padding-left: 5px; }
+.station-sign.metro .line-bar::after { font-size: 1.5em; }
+.station-sign.metro .adjacent-stations { display: none; }
+
+
+/* === 駅名標のデザイン ここまで === */
+
+#spin-again-button {
+    margin-top: 20px;
+    background-color: #27ae60;
 }
 
 #spin-again-button {
-    background-color: #5cb85c;
-}
-
-#spin-again-button:hover {
-    background-color: #4cae4c;
-}
-
-.hidden {
-    display: none;
+    display: block; /* ブロック要素にする */
+    margin: 20px auto 0; /* 上下のマージンと、左右のマージンを自動に設定 */
+    max-width: 300px; /* ボタンの最大幅を指定 */
+    background-color: #27ae60;
 }

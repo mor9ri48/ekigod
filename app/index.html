@@ -3,37 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>気まぐれ駅探訪 Eki-Let</title>
+    <title>駅ゴッド - Eki GoD</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
     <div class="container">
         <header>
-            <h1>気まぐれ駅探訪 Eki-Let</h1>
+            <h1>駅ゴッド - Eki GoD</h1>
         </header>
 
-        <main id="main-content">
-            <section id="settings-view">
-                <h2>行き先の条件を決めてください</h2>
-                <div class="form-group">
-                    <label for="line-filter">路線で絞り込む</label>
-                    <select id="line-filter">
-                        <option value="all">すべての路線から</option>
-                        </select>
-                </div>
-                <button id="spin-button">ルーレットを回す！</button>
-            </section>
-
-            <section id="result-view" class="hidden">
-                <h2>今回の行き先は...</h2>
-                <h3 id="station-name"></h3>
-                <div class="routemap-container">
-                    <img id="routemap-image" src="" alt="路線図">
-                </div>
-                <button id="spin-again-button">もう一度回す</button>
-            </section>
-        </main>
+        <main id="app-container"></main>
+        
     </div>
 
     <script src="scripts/main.js"></script>

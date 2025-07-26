@@ -1,63 +1,310 @@
 [
   {
     "lineName": "JR山手線",
-    "lineId": "yamanote",
-    "imageFile": "yamanote.png",
+    "lineId": "jr-yamanote",
+    "imageFile": "jr_map.png",
+    "lineColor": "#9acd32",
+    "textColor": "#000000",
+    "isLoopLine": true,
+    "designType": "jr",
     "stations": [
-      { "stationName": "東京", "stationReading": "とうきょう" },
-      { "stationName": "神田", "stationReading": "かんだ" },
-      { "stationName": "秋葉原", "stationReading": "あきはばら" },
-      { "stationName": "御徒町", "stationReading": "おかちまち" },
-      { "stationName": "上野", "stationReading": "うえの" },
-      { "stationName": "鶯谷", "stationReading": "うぐいすだに" },
-      { "stationName": "日暮里", "stationReading": "にっぽり" },
-      { "stationName": "西日暮里", "stationReading": "にしにっぽり" },
-      { "stationName": "田端", "stationReading": "たばた" },
-      { "stationName": "駒込", "stationReading": "こまごめ" },
-      { "stationName": "巣鴨", "stationReading": "すがも" },
-      { "stationName": "大塚", "stationReading": "おおつか" },
-      { "stationName": "池袋", "stationReading": "いけぶくろ" },
-      { "stationName": "目白", "stationReading": "めじろ" },
-      { "stationName": "高田馬場", "stationReading": "たかだのばば" },
-      { "stationName": "新大久保", "stationReading": "しんおおくぼ" },
-      { "stationName": "新宿", "stationReading": "しんじゅく" },
-      { "stationName": "代々木", "stationReading": "よよぎ" },
-      { "stationName": "原宿", "stationReading": "はらじゅく" },
-      { "stationName": "渋谷", "stationReading": "しぶや" },
-      { "stationName": "恵比寿", "stationReading": "えびす" },
-      { "stationName": "目黒", "stationReading": "めぐろ" },
-      { "stationName": "五反田", "stationReading": "ごたんだ" },
-      { "stationName": "大崎", "stationReading": "おおさき" },
-      { "stationName": "品川", "stationReading": "しながわ" },
-      { "stationName": "高輪ゲートウェイ", "stationReading": "たかなわゲートウェイ" },
-      { "stationName": "田町", "stationReading": "たまち" },
-      { "stationName": "浜松町", "stationReading": "はままつちょう" },
-      { "stationName": "新橋", "stationReading": "しんばし" },
-      { "stationName": "有楽町", "stationReading": "ゆうらくちょう" }
+      { "stationName": "東京", "stationReading": "とうきょう", "stationRomaji": "Tōkyō" }, { "stationName": "神田", "stationReading": "かんだ", "stationRomaji": "Kanda" }, { "stationName": "秋葉原", "stationReading": "あきはばら", "stationRomaji": "Akihabara" }, { "stationName": "御徒町", "stationReading": "おかちまち", "stationRomaji": "Okachimachi" }, { "stationName": "上野", "stationReading": "うえの", "stationRomaji": "Ueno" }, { "stationName": "鶯谷", "stationReading": "うぐいすだに", "stationRomaji": "Uguisudani" }, { "stationName": "日暮里", "stationReading": "にっぽり", "stationRomaji": "Nippori" }, { "stationName": "西日暮里", "stationReading": "にしにっぽり", "stationRomaji": "Nishi-Nippori" }, { "stationName": "田端", "stationReading": "たばた", "stationRomaji": "Tabata" }, { "stationName": "駒込", "stationReading": "こまごめ", "stationRomaji": "Komagome" }, { "stationName": "巣鴨", "stationReading": "すがも", "stationRomaji": "Sugamo" }, { "stationName": "大塚", "stationReading": "おおつか", "stationRomaji": "Ōtsuka" }, { "stationName": "池袋", "stationReading": "いけぶくろ", "stationRomaji": "Ikebukuro" }, { "stationName": "目白", "stationReading": "めじろ", "stationRomaji": "Mejiro" }, { "stationName": "高田馬場", "stationReading": "たかだのばば", "stationRomaji": "Takadanobaba" }, { "stationName": "新大久保", "stationReading": "しんおおくぼ", "stationRomaji": "Shin-Ōkubo" }, { "stationName": "新宿", "stationReading": "しんじゅく", "stationRomaji": "Shinjuku" }, { "stationName": "代々木", "stationReading": "よよぎ", "stationRomaji": "Yoyogi" }, { "stationName": "原宿", "stationReading": "はらじゅく", "stationRomaji": "Harajuku" }, { "stationName": "渋谷", "stationReading": "しぶや", "stationRomaji": "Shibuya" }, { "stationName": "恵比寿", "stationReading": "えびす", "stationRomaji": "Ebisu" }, { "stationName": "目黒", "stationReading": "めぐろ", "stationRomaji": "Meguro" }, { "stationName": "五反田", "stationReading": "ごたんだ", "stationRomaji": "Gotanda" }, { "stationName": "大崎", "stationReading": "おおさき", "stationRomaji": "Ōsaki" }, { "stationName": "品川", "stationReading": "しながわ", "stationRomaji": "Shinagawa" }, { "stationName": "高輪ゲートウェイ", "stationReading": "たかなわゲートウェイ", "stationRomaji": "Takanawa Gateway" }, { "stationName": "田町", "stationReading": "たまち", "stationRomaji": "Tamachi" }, { "stationName": "浜松町", "stationReading": "はままつちょう", "stationRomaji": "Hamamatsuchō" }, { "stationName": "新橋", "stationReading": "しんばし", "stationRomaji": "Shimbashi" }, { "stationName": "有楽町", "stationReading": "ゆうらくちょう", "stationRomaji": "Yūrakuchō" }
     ]
   },
   {
-    "lineName": "京王井の頭線",
-    "lineId": "keio-inokashira",
-    "imageFile": "keio-inokashira.png",
+    "lineName": "JR中央線(快速)",
+    "lineId": "jr-chuo-rapid",
+    "imageFile": "jr_map.png",
+    "lineColor": "#f15a22",
+    "textColor": "#FFFFFF",
+    "isLoopLine": false,
+    "designType": "jr",
     "stations": [
-      { "stationName": "渋谷", "stationReading": "しぶや" },
-      { "stationName": "神泉", "stationReading": "しんせん" },
-      { "stationName": "駒場東大前", "stationReading": "こまばとうだいまえ" },
-      { "stationName": "池ノ上", "stationReading": "いけのうえ" },
-      { "stationName": "下北沢", "stationReading": "しもきたざわ" },
-      { "stationName": "新代田", "stationReading": "しんだいた" },
-      { "stationName": "東松原", "stationReading": "ひがしまつばら" },
-      { "stationName": "明大前", "stationReading": "めいだいまえ" },
-      { "stationName": "永福町", "stationReading": "えいふくちょう" },
-      { "stationName": "西永福", "stationReading": "にしえいふく" },
-      { "stationName": "浜田山", "stationReading": "はまだやま" },
-      { "stationName": "高井戸", "stationReading": "たかいど" },
-      { "stationName": "富士見ヶ丘", "stationReading": "ふじみがおか" },
-      { "stationName": "久我山", "stationReading": "くがやま" },
-      { "stationName": "三鷹台", "stationReading": "みたかだい" },
-      { "stationName": "井の頭公園", "stationReading": "いのかしらこうえん" },
-      { "stationName": "吉祥寺", "stationReading": "きちじょうじ" }
+      { "stationName": "東京", "stationReading": "とうきょう", "stationRomaji": "Tōkyō" }, { "stationName": "神田", "stationReading": "かんだ", "stationRomaji": "Kanda" }, { "stationName": "御茶ノ水", "stationReading": "おちゃのみず", "stationRomaji": "Ochanomizu" }, { "stationName": "四ツ谷", "stationReading": "よつや", "stationRomaji": "Yotsuya" }, { "stationName": "新宿", "stationReading": "しんじゅく", "stationRomaji": "Shinjuku" }, { "stationName": "中野", "stationReading": "なかの", "stationRomaji": "Nakano" }, { "stationName": "高円寺", "stationReading": "こうえんじ", "stationRomaji": "Kōenji" }, { "stationName": "阿佐ケ谷", "stationReading": "あさがや", "stationRomaji": "Asagaya" }, { "stationName": "荻窪", "stationReading": "おぎくぼ", "stationRomaji": "Ogikubo" }, { "stationName": "西荻窪", "stationReading": "にしおぎくぼ", "stationRomaji": "Nishi-Ogikubo" }, { "stationName": "吉祥寺", "stationReading": "きちじょうじ", "stationRomaji": "Kichijōji" }, { "stationName": "三鷹", "stationReading": "みたか", "stationRomaji": "Mitaka" }, { "stationName": "武蔵境", "stationReading": "むさしさかい", "stationRomaji": "Musashi-Sakai" }, { "stationName": "東小金井", "stationReading": "ひがしこがねい", "stationRomaji": "Higashi-Koganei" }, { "stationName": "武蔵小金井", "stationReading": "むさしこがねい", "stationRomaji": "Musashi-Koganei" }, { "stationName": "国分寺", "stationReading": "こくぶんじ", "stationRomaji": "Kokubunji" }, { "stationName": "西国分寺", "stationReading": "にしこくぶんじ", "stationRomaji": "Nishi-Kokubunji" }, { "stationName": "国立", "stationReading": "くにたち", "stationRomaji": "Kunitachi" }, { "stationName": "立川", "stationReading": "たちかわ", "stationRomaji": "Tachikawa" }, { "stationName": "日野", "stationReading": "ひの", "stationRomaji": "Hino" }, { "stationName": "豊田", "stationReading": "とよだ", "stationRomaji": "Toyoda" }, { "stationName": "八王子", "stationReading": "はちおうじ", "stationRomaji": "Hachiōji" }, { "stationName": "西八王子", "stationReading": "にしはちおうじ", "stationRomaji": "Nishi-Hachiōji" }, { "stationName": "高尾", "stationReading": "たかお", "stationRomaji": "Takao" }
+    ]
+  },
+  {
+    "lineName": "JR横浜線・根岸線",
+    "lineId": "jr-yokohama-negishi",
+    "imageFile": "jr_map.png",
+    "lineColor": "#99cc00",
+    "textColor": "#000000",
+    "isLoopLine": false,
+    "designType": "jr",
+    "stations": [
+      { "stationName": "八王子", "stationReading": "はちおうじ", "stationRomaji": "Hachiōji" }, { "stationName": "片倉", "stationReading": "かたくら", "stationRomaji": "Katakura" }, { "stationName": "八王子みなみ野", "stationReading": "はちおうじみなみの", "stationRomaji": "Hachiōji-Minamino" }, { "stationName": "相原", "stationReading": "あいはら", "stationRomaji": "Aihara" }, { "stationName": "橋本", "stationReading": "はしもと", "stationRomaji": "Hashimoto" }, { "stationName": "相模原", "stationReading": "さがみはら", "stationRomaji": "Sagamihara" }, { "stationName": "矢部", "stationReading": "やべ", "stationRomaji": "Yabe" }, { "stationName": "淵野辺", "stationReading": "ふちのべ", "stationRomaji": "Fuchinobe" }, { "stationName": "古淵", "stationReading": "こぶち", "stationRomaji": "Kobuchi" }, { "stationName": "町田", "stationReading": "まちだ", "stationRomaji": "Machida" }, { "stationName": "成瀬", "stationReading": "なるせ", "stationRomaji": "Naruse" }, { "stationName": "長津田", "stationReading": "ながつた", "stationRomaji": "Nagatsuta" }, { "stationName": "十日市場", "stationReading": "とおかいちば", "stationRomaji": "Tōkaichiba" }, { "stationName": "中山", "stationReading": "なかやま", "stationRomaji": "Nakayama" }, { "stationName": "鴨居", "stationReading": "かもい", "stationRomaji": "Kamoi" }, { "stationName": "小机", "stationReading": "こづくえ", "stationRomaji": "Kozukue" }, { "stationName": "新横浜", "stationReading": "しんよこはま", "stationRomaji": "Shin-Yokohama" }, { "stationName": "菊名", "stationReading": "きくな", "stationRomaji": "Kikuna" }, { "stationName": "大口", "stationReading": "おおぐち", "stationRomaji": "Ōguchi" }, { "stationName": "東神奈川", "stationReading": "ひがしかながわ", "stationRomaji": "Higashi-Kanagawa" }, { "stationName": "横浜", "stationReading": "よこはま", "stationRomaji": "Yokohama" }, { "stationName": "桜木町", "stationReading": "さくらぎちょう", "stationRomaji": "Sakuragichō" }, { "stationName": "関内", "stationReading": "かんない", "stationRomaji": "Kannai" }, { "stationName": "石川町", "stationReading": "いしかわちょう", "stationRomaji": "Ishikawachō" }, { "stationName": "山手", "stationReading": "やまて", "stationRomaji": "Yamate" }, { "stationName": "根岸", "stationReading": "ねぎし", "stationRomaji": "Negishi" }, { "stationName": "磯子", "stationReading": "いそご", "stationRomaji": "Isogo" }, { "stationName": "新杉田", "stationReading": "しんすぎた", "stationRomaji": "Shin-Sugita" }, { "stationName": "洋光台", "stationReading": "ようこうだい", "stationRomaji": "Yōkōdai" }, { "stationName": "港南台", "stationReading": "こうなんだい", "stationRomaji": "Kōnandai" }, { "stationName": "本郷台", "stationReading": "ほんごうだい", "stationRomaji": "Hongōdai" }, { "stationName": "大船", "stationReading": "おおふな", "stationRomaji": "Ōfuna" }
+    ]
+  },
+  {
+    "lineName": "JR南武線",
+    "lineId": "jr-nambu",
+    "imageFile": "jr_map.png",
+    "lineColor": "#ffd400",
+    "textColor": "#000000",
+    "isLoopLine": false,
+    "designType": "jr",
+    "stations": [
+      { "stationName": "川崎", "stationReading": "かわさき", "stationRomaji": "Kawasaki" }, { "stationName": "尻手", "stationReading": "しって", "stationRomaji": "Shitte" }, { "stationName": "矢向", "stationReading": "やこう", "stationRomaji": "Yakō" }, { "stationName": "鹿島田", "stationReading": "かしまだ", "stationRomaji": "Kashimada" }, { "stationName": "平間", "stationReading": "ひらま", "stationRomaji": "Hirama" }, { "stationName": "向河原", "stationReading": "むかいがわら", "stationRomaji": "Mukaigawara" }, { "stationName": "武蔵小杉", "stationReading": "むさしこすぎ", "stationRomaji": "Musashi-Kosugi" }, { "stationName": "武蔵中原", "stationReading": "むさしなかはら", "stationRomaji": "Musashi-Nakahara" }, { "stationName": "武蔵新城", "stationReading": "むさししんじょう", "stationRomaji": "Musashi-Shinjō" }, { "stationName": "武蔵溝ノ口", "stationReading": "むさしみぞのくち", "stationRomaji": "Musashi-Mizonokuchi" }, { "stationName": "津田山", "stationReading": "つだやま", "stationRomaji": "Tsudayama" }, { "stationName": "久地", "stationReading": "くじ", "stationRomaji": "Kuji" }, { "stationName": "宿河原", "stationReading": "しゅくがわら", "stationRomaji": "Shukugawara" }, { "stationName": "登戸", "stationReading": "のぼりど", "stationRomaji": "Noborito" }, { "stationName": "中野島", "stationReading": "なかのしま", "stationRomaji": "Nakanoshima" }, { "stationName": "稲田堤", "stationReading": "いなだづつみ", "stationRomaji": "Inadazutsumi" }, { "stationName": "矢野口", "stationReading": "やのくち", "stationRomaji": "Yanokuchi" }, { "stationName": "稲城長沼", "stationReading": "いなぎながぬま", "stationRomaji": "Inagi-Naganuma" }, { "stationName": "南多摩", "stationReading": "みなみたま", "stationRomaji": "Minami-Tama" }, { "stationName": "府中本町", "stationReading": "ふちゅうほんまち", "stationRomaji": "Fuchū-Hommachi" }, { "stationName": "分倍河原", "stationReading": "ぶばいがわら", "stationRomaji": "Bubaigawara" }, { "stationName": "西府", "stationReading": "にしふ", "stationRomaji": "Nishifu" }, { "stationName": "谷保", "stationReading": "やほ", "stationRomaji": "Yaho" }, { "stationName": "矢川", "stationReading": "やがわ", "stationRomaji": "Yagawa" }, { "stationName": "西国立", "stationReading": "にしくにたち", "stationRomaji": "Nishi-Kunitachi" }, { "stationName": "立川", "stationReading": "たちかわ", "stationRomaji": "Tachikawa" }
+    ]
+  },
+  {
+    "lineName": "JR相模線",
+    "lineId": "jr-sagami",
+    "imageFile": "jr_map.png",
+    "lineColor": "#8db255",
+    "textColor": "#000000",
+    "isLoopLine": false,
+    "designType": "jr",
+    "stations": [
+      { "stationName": "茅ケ崎", "stationReading": "ちがさき", "stationRomaji": "Chigasaki" }, { "stationName": "北茅ケ崎", "stationReading": "きたほうがさき", "stationRomaji": "Kita-Chigasaki" }, { "stationName": "香川", "stationReading": "かがわ", "stationRomaji": "Kagawa" }, { "stationName": "寒川", "stationReading": "さむかわ", "stationRomaji": "Samukawa" }, { "stationName": "宮山", "stationReading": "みややま", "stationRomaji": "Miyayama" }, { "stationName": "倉見", "stationReading": "くらみ", "stationRomaji": "Kurami" }, { "stationName": "門沢橋", "stationReading": "かどさわばし", "stationRomaji": "Kadosawabashi" }, { "stationName": "社家", "stationReading": "しゃけ", "stationRomaji": "Shake" }, { "stationName": "厚木", "stationReading": "あつぎ", "stationRomaji": "Atsugi" }, { "stationName": "海老名", "stationReading": "えびな", "stationRomaji": "Ebina" }, { "stationName": "入谷", "stationReading": "いりや", "stationRomaji": "Iriya" }, { "stationName": "相武台下", "stationReading": "そうぶだいした", "stationRomaji": "Sōbudai-shita" }, { "stationName": "下溝", "stationReading": "しもみぞ", "stationRomaji": "Shimomizo" }, { "stationName": "原当麻", "stationReading": "はらたいま", "stationRomaji": "Harataima" }, { "stationName": "番田", "stationReading": "ばんだ", "stationRomaji": "Banda" }, { "stationName": "上溝", "stationReading": "かみみぞ", "stationRomaji": "Kamimizo" }, { "stationName": "南橋本", "stationReading": "みなみはしもと", "stationRomaji": "Minami-Hashimoto" }, { "stationName": "橋本", "stationReading": "はしもと", "stationRomaji": "Hashimoto" }
+    ]
+  },
+  {
+    "lineName": "JR横須賀線・総武線(快速)",
+    "lineId": "jr-yokosuka-sobu-rapid",
+    "imageFile": "jr_map.png",
+    "lineColor": "#007ac0",
+    "textColor": "#FFFFFF",
+    "isLoopLine": false,
+    "designType": "jr",
+    "stations": [
+        { "stationName": "新小岩", "stationReading": "しんこいわ", "stationRomaji": "Shin-Koiwa" },
+        { "stationName": "錦糸町", "stationReading": "きんしちょう", "stationRomaji": "Kinshichō" },
+        { "stationName": "馬喰町", "stationReading": "ばくろちょう", "stationRomaji": "Bakurochō" },
+        { "stationName": "新日本橋", "stationReading": "しんにほんばし", "stationRomaji": "Shin-Nihombashi" },
+        { "stationName": "東京", "stationReading": "とうきょう", "stationRomaji": "Tōkyō" },
+        { "stationName": "新橋", "stationReading": "しんばし", "stationRomaji": "Shimbashi" },
+        { "stationName": "品川", "stationReading": "しながわ", "stationRomaji": "Shinagawa" },
+        { "stationName": "西大井", "stationReading": "にしおおい", "stationRomaji": "Nishi-Ōi" },
+        { "stationName": "武蔵小杉", "stationReading": "むさしこすぎ", "stationRomaji": "Musashi-Kosugi" },
+        { "stationName": "新川崎", "stationReading": "しんかわさき", "stationRomaji": "Shin-Kawasaki" },
+        { "stationName": "横浜", "stationReading": "よこはま", "stationRomaji": "Yokohama" },
+        { "stationName": "保土ケ谷", "stationReading": "ほどがや", "stationRomaji": "Hodogaya" },
+        { "stationName": "東戸塚", "stationReading": "ひがしとつか", "stationRomaji": "Higashi-Totsuka" },
+        { "stationName": "戸塚", "stationReading": "とつか", "stationRomaji": "Totsuka" },
+        { "stationName": "大船", "stationReading": "おおふな", "stationRomaji": "Ōfuna" },
+        { "stationName": "北鎌倉", "stationReading": "きたかまくら", "stationRomaji": "Kita-Kamakura" },
+        { "stationName": "鎌倉", "stationReading": "かまくら", "stationRomaji": "Kamakura" },
+        { "stationName": "逗子", "stationReading": "ずし", "stationRomaji": "Zushi" },
+        { "stationName": "東逗子", "stationReading": "ひがしずし", "stationRomaji": "Higashi-Zushi" },
+        { "stationName": "田浦", "stationReading": "たうら", "stationRomaji": "Taura" },
+        { "stationName": "横須賀", "stationReading": "よこすか", "stationRomaji": "Yokosuka" },
+        { "stationName": "衣笠", "stationReading": "きぬがさ", "stationRomaji": "Kinugasa" },
+        { "stationName": "久里浜", "stationReading": "くりはま", "stationRomaji": "Kurihama" }
+    ]
+  },
+  {
+    "lineName": "JR上野東京ライン",
+    "lineId": "jr-ueno-tokyo-line",
+    "imageFile": "jr_map.png",
+    "lineColor": "#8d4a9b",
+    "textColor": "#FFFFFF",
+    "isLoopLine": false,
+    "designType": "jr",
+    "stations": [
+        { "stationName": "赤羽", "stationReading": "あかばね", "stationRomaji": "Akabane" },
+        { "stationName": "尾久", "stationReading": "おくい", "stationRomaji": "Oku" },
+        { "stationName": "上野", "stationReading": "うえの", "stationRomaji": "Ueno" },
+        { "stationName": "東京", "stationReading": "とうきょう", "stationRomaji": "Tōkyō" },
+        { "stationName": "新橋", "stationReading": "しんばし", "stationRomaji": "Shimbashi" },
+        { "stationName": "品川", "stationReading": "しながわ", "stationRomaji": "Shinagawa" },
+        { "stationName": "川崎", "stationReading": "かわさき", "stationRomaji": "Kawasaki" },
+        { "stationName": "横浜", "stationReading": "よこはま", "stationRomaji": "Yokohama" },
+        { "stationName": "戸塚", "stationReading": "とつか", "stationRomaji": "Totsuka" },
+        { "stationName": "大船", "stationReading": "おおふな", "stationRomaji": "Ōfuna" },
+        { "stationName": "藤沢", "stationReading": "ふじさわ", "stationRomaji": "Fujisawa" },
+        { "stationName": "辻堂", "stationReading": "つじどう", "stationRomaji": "Tsujidō" },
+        { "stationName": "茅ケ崎", "stationReading": "ちがさき", "stationRomaji": "Chigasaki" },
+        { "stationName": "平塚", "stationReading": "ひらつか", "stationRomaji": "Hiratsuka" },
+        { "stationName": "大磯", "stationReading": "おおいそ", "stationRomaji": "Ōiso" },
+        { "stationName": "二宮", "stationReading": "にのみや", "stationRomaji": "Ninomiya" },
+        { "stationName": "国府津", "stationReading": "こうづ", "stationRomaji": "Kōzu" },
+        { "stationName": "鴨宮", "stationReading": "かものみや", "stationRomaji": "Kamonomiya" },
+        { "stationName": "小田原", "stationReading": "おだわら", "stationRomaji": "Odawara" }
+    ]
+  },
+  {
+    "lineName": "JR湘南新宿ライン",
+    "lineId": "jr-shonan-shinjuku-line",
+    "imageFile": "jr_map.png",
+    "lineColor": "#e2222a",
+    "textColor": "#FFFFFF",
+    "isLoopLine": false,
+    "designType": "jr",
+    "stations": [
+        { "stationName": "赤羽", "stationReading": "あかばね", "stationRomaji": "Akabane" },
+        { "stationName": "池袋", "stationReading": "いけぶくろ", "stationRomaji": "Ikebukuro" },
+        { "stationName": "新宿", "stationReading": "しんじゅく", "stationRomaji": "Shinjuku" },
+        { "stationName": "渋谷", "stationReading": "しぶや", "stationRomaji": "Shibuya" },
+        { "stationName": "恵比寿", "stationReading": "えびす", "stationRomaji": "Ebisu" },
+        { "stationName": "大崎", "stationReading": "おおさき", "stationRomaji": "Ōsaki" },
+        { "stationName": "西大井", "stationReading": "にしおおい", "stationRomaji": "Nishi-Ōi" },
+        { "stationName": "武蔵小杉", "stationReading": "むさしこすぎ", "stationRomaji": "Musashi-Kosugi" },
+        { "stationName": "新川崎", "stationReading": "しんかわさき", "stationRomaji": "Shin-Kawasaki" },
+        { "stationName": "横浜", "stationReading": "よこはま", "stationRomaji": "Yokohama" },
+        { "stationName": "保土ケ谷", "stationReading": "ほどがや", "stationRomaji": "Hodogaya" },
+        { "stationName": "東戸塚", "stationReading": "ひがしとつか", "stationRomaji": "Higashi-Totsuka" },
+        { "stationName": "戸塚", "stationReading": "とつか", "stationRomaji": "Totsuka" },
+        { "stationName": "大船", "stationReading": "おおふな", "stationRomaji": "Ōfuna" },
+        { "stationName": "北鎌倉", "stationReading": "きたかまくら", "stationRomaji": "Kita-Kamakura" },
+        { "stationName": "鎌倉", "stationReading": "かまくら", "stationRomaji": "Kamakura" },
+        { "stationName": "逗子", "stationReading": "ずし", "stationRomaji": "Zushi" }
+    ]
+  },
+  {
+    "lineName": "東京メトロ銀座線",
+    "lineId": "tokyometro-ginza",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#f39700",
+    "textColor": "#000000",
+    "isLoopLine": false,
+    "designType": "metro",
+    "stations": [
+        { "stationName": "渋谷", "stationReading": "しぶや", "stationRomaji": "Shibuya" }, { "stationName": "表参道", "stationReading": "おもてさんどう", "stationRomaji": "Omote-sandō" }, { "stationName": "外苑前", "stationReading": "がいえんまえ", "stationRomaji": "Gaiemmae" }, { "stationName": "青山一丁目", "stationReading": "あおやまいっちょうめ", "stationRomaji": "Aoyama-itchōme" }, { "stationName": "赤坂見附", "stationReading": "あかさかみつけ", "stationRomaji": "Akasaka-mitsuke" }, { "stationName": "溜池山王", "stationReading": "ためいけさんのう", "stationRomaji": "Tameike-sannō" }, { "stationName": "虎ノ門", "stationReading": "とらのもん", "stationRomaji": "Toranomon" }, { "stationName": "新橋", "stationReading": "しんばし", "stationRomaji": "Shimbashi" }, { "stationName": "銀座", "stationReading": "ぎんざ", "stationRomaji": "Ginza" }, { "stationName": "京橋", "stationReading": "きょうばし", "stationRomaji": "Kyōbashi" }, { "stationName": "日本橋", "stationReading": "にほんばし", "stationRomaji": "Nihombashi" }, { "stationName": "三越前", "stationReading": "みつこしまえ", "stationRomaji": "Mitsukoshimae" }, { "stationName": "神田", "stationReading": "かんだ", "stationRomaji": "Kanda" }, { "stationName": "末広町", "stationReading": "すえひろちょう", "stationRomaji": "Suehirochō" }, { "stationName": "上野広小路", "stationReading": "うえのひろこうじ", "stationRomaji": "Ueno-hirokōji" }, { "stationName": "上野", "stationReading": "うえの", "stationRomaji": "Ueno" }, { "stationName": "稲荷町", "stationReading": "いなりちょう", "stationRomaji": "Inarichō" }, { "stationName": "田原町", "stationReading": "たわらまち", "stationRomaji": "Tawaramachi" }, { "stationName": "浅草", "stationReading": "あさくさ", "stationRomaji": "Asakusa" }
+    ]
+  },
+  {
+    "lineName": "東京メトロ丸ノ内線",
+    "lineId": "tokyometro-marunouchi",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#e60012",
+    "textColor": "#FFFFFF",
+    "isLoopLine": false,
+    "designType": "metro",
+    "stations": [
+      { "stationName": "荻窪", "stationReading": "おぎくぼ", "stationRomaji": "Ogikubo" }, { "stationName": "南阿佐ケ谷", "stationReading": "みなみあさがや", "stationRomaji": "Minami-Asagaya" }, { "stationName": "新高円寺", "stationReading": "しんこうえんじ", "stationRomaji": "Shin-Kōenji" }, { "stationName": "東高円寺", "stationReading": "ひがしこうえんじ", "stationRomaji": "Higashi-Kōenji" }, { "stationName": "新中野", "stationReading": "しんなかの", "stationRomaji": "Shin-Nakano" }, { "stationName": "中野坂上", "stationReading": "なかのさかうえ", "stationRomaji": "Nakano-sakaue" }, { "stationName": "西新宿", "stationReading": "にししんじゅく", "stationRomaji": "Nishi-Shinjuku" }, { "stationName": "新宿", "stationReading": "しんじゅく", "stationRomaji": "Shinjuku" }, { "stationName": "新宿三丁目", "stationReading": "しんじゅくさんちょうめ", "stationRomaji": "Shinjuku-sanchōme" }, { "stationName": "新宿御苑前", "stationReading": "しんじゅくぎょえんまえ", "stationRomaji": "Shinjuku-gyoemmae" }, { "stationName": "四谷三丁目", "stationReading": "よつやさんちょうめ", "stationRomaji": "Yotsuya-sanchōme" }, { "stationName": "四ツ谷", "stationReading": "よつや", "stationRomaji": "Yotsuya" }, { "stationName": "赤坂見附", "stationReading": "あかさかみつけ", "stationRomaji": "Akasaka-mitsuke" }, { "stationName": "国会議事堂前", "stationReading": "こっかいぎじどうまえ", "stationRomaji": "Kokkai-gijidō-mae" }, { "stationName": "霞ケ関", "stationReading": "かすみがせき", "stationRomaji": "Kasumigaseki" }, { "stationName": "銀座", "stationReading": "ぎんざ", "stationRomaji": "Ginza" }, { "stationName": "東京", "stationReading": "とうきょう", "stationRomaji": "Tōkyō" }, { "stationName": "大手町", "stationReading": "おおてまち", "stationRomaji": "Ōtemachi" }, { "stationName": "淡路町", "stationReading": "あわじちょう", "stationRomaji": "Awajichō" }, { "stationName": "御茶ノ水", "stationReading": "おちゃのみず", "stationRomaji": "Ochanomizu" }, { "stationName": "本郷三丁目", "stationReading": "ほんごうさんちょうめ", "stationRomaji": "Hongō-sanchōme" }, { "stationName": "後楽園", "stationReading": "こうらくえん", "stationRomaji": "Kōrakuen" }, { "stationName": "茗荷谷", "stationReading": "みょうがだに", "stationRomaji": "Myōgadani" }, { "stationName": "新大塚", "stationReading": "しんおおつか", "stationRomaji": "Shin-Ōtsuka" }, { "stationName": "池袋", "stationReading": "いけぶくろ", "stationRomaji": "Ikebukuro" }
+    ]
+  },
+  {
+    "lineName": "東京メトロ日比谷線",
+    "lineId": "tokyometro-hibiya",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#9caeb7",
+    "textColor": "#000000",
+    "isLoopLine": false,
+    "designType": "metro",
+    "stations": [
+        { "stationName": "中目黒", "stationReading": "なかめぐろ", "stationRomaji": "Naka-meguro" }, { "stationName": "恵比寿", "stationReading": "えびす", "stationRomaji": "Ebisu" }, { "stationName": "広尾", "stationReading": "ひろお", "stationRomaji": "Hiroo" }, { "stationName": "六本木", "stationReading": "ろっぽんぎ", "stationRomaji": "Roppongi" }, { "stationName": "神谷町", "stationReading": "かみやちょう", "stationRomaji": "Kamiyachō" }, { "stationName": "虎ノ門ヒルズ", "stationReading": "とらのもんヒルズ", "stationRomaji": "Toranomon Hills" }, { "stationName": "霞ケ関", "stationReading": "かすみがせき", "stationRomaji": "Kasumigaseki" }, { "stationName": "日比谷", "stationReading": "ひびや", "stationRomaji": "Hibiya" }, { "stationName": "銀座", "stationReading": "ぎんざ", "stationRomaji": "Ginza" }, { "stationName": "東銀座", "stationReading": "ひがしぎんざ", "stationRomaji": "Higashi-ginza" }, { "stationName": "築地", "stationReading": "つきじ", "stationRomaji": "Tsukiji" }, { "stationName": "八丁堀", "stationReading": "はっちょうぼり", "stationRomaji": "Hatchōbori" }, { "stationName": "茅場町", "stationReading": "かやばちょう", "stationRomaji": "Kayabachō" }, { "stationName": "人形町", "stationReading": "にんぎょうちょう", "stationRomaji": "Ningyōchō" }, { "stationName": "小伝馬町", "stationReading": "こでんまちょう", "stationRomaji": "Kodemmachō" }, { "stationName": "秋葉原", "stationReading": "あきはばら", "stationRomaji": "Akihabara" }, { "stationName": "仲御徒町", "stationReading": "なかおかちまち", "stationRomaji": "Naka-Okachimachi" }, { "stationName": "上野", "stationReading": "うえの", "stationRomaji": "Ueno" }, { "stationName": "入谷", "stationReading": "いりや", "stationRomaji": "Iriya" }, { "stationName": "三ノ輪", "stationReading": "みのわ", "stationRomaji": "Minowa" }, { "stationName": "南千住", "stationReading": "みなみせんじゅ", "stationRomaji": "Minami-Senju" }, { "stationName": "北千住", "stationReading": "きたせんじゅ", "stationRomaji": "Kita-Senju" }
+    ]
+  },
+  {
+    "lineName": "東京メトロ東西線",
+    "lineId": "tokyometro-tozai",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#00a7e9",
+    "textColor": "#FFFFFF",
+    "isLoopLine": false,
+    "designType": "metro",
+    "stations": [
+        { "stationName": "中野", "stationReading": "なかの", "stationRomaji": "Nakano" }, { "stationName": "落合", "stationReading": "おちあい", "stationRomaji": "Ochiai" }, { "stationName": "高田馬場", "stationReading": "たかだのばば", "stationRomaji": "Takadanobaba" }, { "stationName": "早稲田", "stationReading": "わせだ", "stationRomaji": "Waseda" }, { "stationName": "神楽坂", "stationReading": "かぐらざか", "stationRomaji": "Kagurazaka" }, { "stationName": "飯田橋", "stationReading": "いいだばし", "stationRomaji": "Iidabashi" }, { "stationName": "九段下", "stationReading": "くだんした", "stationRomaji": "Kudanshita" }, { "stationName": "竹橋", "stationReading": "たけばし", "stationRomaji": "Takebashi" }, { "stationName": "大手町", "stationReading": "おおてまち", "stationRomaji": "Ōtemachi" }, { "stationName": "日本橋", "stationReading": "にほんばし", "stationRomaji": "Nihombashi" }, { "stationName": "茅場町", "stationReading": "かやばちょう", "stationRomaji": "Kayabachō" }, { "stationName": "門前仲町", "stationReading": "もんぜんなかちょう", "stationRomaji": "Monzen-Nakachō" }, { "stationName": "木場", "stationReading": "きば", "stationRomaji": "Kiba" }, { "stationName": "東陽町", "stationReading": "とうようちょう", "stationRomaji": "Tōyōchō" }, { "stationName": "南砂町", "stationReading": "みなみすなまち", "stationRomaji": "Minami-Sunamachi" }, { "stationName": "西葛西", "stationReading": "にしかさい", "stationRomaji": "Nishi-Kasai" }, { "stationName": "葛西", "stationReading": "かさい", "stationRomaji": "Kasai" }
+    ]
+  },
+  {
+    "lineName": "東京メトロ千代田線",
+    "lineId": "tokyometro-chiyoda",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#00994d",
+    "textColor": "#FFFFFF",
+    "isLoopLine": false,
+    "designType": "metro",
+    "stations": [
+        { "stationName": "代々木上原", "stationReading": "よよぎうえはら", "stationRomaji": "Yoyogi-Uehara" }, { "stationName": "代々木公園", "stationReading": "よよぎこうえん", "stationRomaji": "Yoyogi-kōen" }, { "stationName": "明治神宮前", "stationReading": "めいじじんぐうまえ", "stationRomaji": "Meiji-jingūmae" }, { "stationName": "表参道", "stationReading": "おもてさんどう", "stationRomaji": "Omote-sandō" }, { "stationName": "乃木坂", "stationReading": "のぎざか", "stationRomaji": "Nogizaka" }, { "stationName": "赤坂", "stationReading": "あかさか", "stationRomaji": "Akasaka" }, { "stationName": "国会議事堂前", "stationReading": "こっかいぎじどうまえ", "stationRomaji": "Kokkai-gijidō-mae" }, { "stationName": "霞ケ関", "stationReading": "かすみがせき", "stationRomaji": "Kasumigaseki" }, { "stationName": "日比谷", "stationReading": "ひびや", "stationRomaji": "Hibiya" }, { "stationName": "二重橋前", "stationReading": "にじゅうばしまえ", "stationRomaji": "Nijūbashimae" }, { "stationName": "大手町", "stationReading": "おおてまち", "stationRomaji": "Ōtemachi" }, { "stationName": "新御茶ノ水", "stationReading": "しんおちゃのみず", "stationRomaji": "Shin-Ochanomizu" }, { "stationName": "湯島", "stationReading": "ゆしま", "stationRomaji": "Yushima" }, { "stationName": "根津", "stationReading": "ねづ", "stationRomaji": "Nezu" }, { "stationName": "千駄木", "stationReading": "せんだぎ", "stationRomaji": "Sendagi" }, { "stationName": "西日暮里", "stationReading": "にしにっぽり", "stationRomaji": "Nishi-Nippori" }, { "stationName": "町屋", "stationReading": "まちや", "stationRomaji": "Machiya" }, { "stationName": "北千住", "stationReading": "きたせんじゅ", "stationRomaji": "Kita-Senju" }, { "stationName": "綾瀬", "stationReading": "あやせ", "stationRomaji": "Ayase" }, { "stationName": "北綾瀬", "stationReading": "きたあやせ", "stationRomaji": "Kita-Ayase" }
+    ]
+  },
+  {
+    "lineName": "東京メトロ有楽町線",
+    "lineId": "tokyometro-yurakucho",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#d7c447",
+    "textColor": "#000000",
+    "isLoopLine": false,
+    "designType": "metro",
+    "stations": [
+        { "stationName": "地下鉄成増", "stationReading": "ちかてつなります", "stationRomaji": "Chikatetsu-Narimasu" }, { "stationName": "地下鉄赤塚", "stationReading": "ちかてつあかつか", "stationRomaji": "Chikatetsu-Akatsuka" }, { "stationName": "平和台", "stationReading": "へいわだい", "stationRomaji": "Heiwadai" }, { "stationName": "氷川台", "stationReading": "ひかわだい", "stationRomaji": "Hikawadai" }, { "stationName": "小竹向原", "stationReading": "こたけむかいはら", "stationRomaji": "Kotake-Mukaihara" }, { "stationName": "千川", "stationReading": "せんかわ", "stationRomaji": "Senkawa" }, { "stationName": "要町", "stationReading": "かなめちょう", "stationRomaji": "Kanamachō" }, { "stationName": "池袋", "stationReading": "いけぶくろ", "stationRomaji": "Ikebukuro" }, { "stationName": "東池袋", "stationReading": "ひがしいけぶくろ", "stationRomaji": "Higashi-Ikebukuro" }, { "stationName": "護国寺", "stationReading": "ごこくじ", "stationRomaji": "Gokokuji" }, { "stationName": "江戸川橋", "stationReading": "えどがわばし", "stationRomaji": "Edogawabashi" }, { "stationName": "飯田橋", "stationReading": "いいだばし", "stationRomaji": "Iidabashi" }, { "stationName": "市ケ谷", "stationReading": "いちがや", "stationRomaji": "Ichigaya" }, { "stationName": "麹町", "stationReading": "こうじまち", "stationRomaji": "Kōjimachi" }, { "stationName": "永田町", "stationReading": "ながたちょう", "stationRomaji": "Nagatachō" }, { "stationName": "桜田門", "stationReading": "さくらだもん", "stationRomaji": "Sakuradamon" }, { "stationName": "有楽町", "stationReading": "ゆうらくちょう", "stationRomaji": "Yūrakuchō" }, { "stationName": "銀座一丁目", "stationReading": "ぎんざいっちょうめ", "stationRomaji": "Ginza-itchōme" }, { "stationName": "新富町", "stationReading": "しんとみちょう", "stationRomaji": "Shintomichō" }, { "stationName": "月島", "stationReading": "つきしま", "stationRomaji": "Tsukishima" }, { "stationName": "豊洲", "stationReading": "とよす", "stationRomaji": "Toyosu" }, { "stationName": "辰巳", "stationReading": "たつみ", "stationRomaji": "Tatsumi" }, { "stationName": "新木場", "stationReading": "しんきば", "stationRomaji": "Shin-Kiba" }
+    ]
+  },
+  {
+    "lineName": "東京メトロ半蔵門線",
+    "lineId": "tokyometro-hanzomon",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#867fdf",
+    "textColor": "#FFFFFF",
+    "isLoopLine": false,
+    "designType": "metro",
+    "stations": [
+        { "stationName": "渋谷", "stationReading": "しぶや", "stationRomaji": "Shibuya" }, { "stationName": "表参道", "stationReading": "おもてさんどう", "stationRomaji": "Omote-sandō" }, { "stationName": "青山一丁目", "stationReading": "あおやまいっちょうめ", "stationRomaji": "Aoyama-itchōme" }, { "stationName": "永田町", "stationReading": "ながたちょう", "stationRomaji": "Nagatachō" }, { "stationName": "半蔵門", "stationReading": "はんぞうもん", "stationRomaji": "Hanzōmon" }, { "stationName": "九段下", "stationReading": "くだんした", "stationRomaji": "Kudanshita" }, { "stationName": "神保町", "stationReading": "じんぼうちょう", "stationRomaji": "Jimbōchō" }, { "stationName": "大手町", "stationReading": "おおてまち", "stationRomaji": "Ōtemachi" }, { "stationName": "三越前", "stationReading": "みつこしまえ", "stationRomaji": "Mitsukoshimae" }, { "stationName": "水天宮前", "stationReading": "すいてんぐうまえ", "stationRomaji": "Suitengūmae" }, { "stationName": "清澄白河", "stationReading": "きよすみしらかわ", "stationRomaji": "Kiyosumi-shirakawa" }, { "stationName": "住吉", "stationReading": "すみよし", "stationRomaji": "Sumiyoshi" }, { "stationName": "錦糸町", "stationReading": "きんしちょう", "stationRomaji": "Kinshichō" }, { "stationName": "押上", "stationReading": "おしあげ", "stationRomaji": "Oshiage" }
+    ]
+  },
+  {
+    "lineName": "東京メトロ南北線",
+    "lineId": "tokyometro-namboku",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#00ada9",
+    "textColor": "#FFFFFF",
+    "isLoopLine": false,
+    "designType": "metro",
+    "stations": [
+        { "stationName": "目黒", "stationReading": "めぐろ", "stationRomaji": "Meguro" }, { "stationName": "白金台", "stationReading": "しろかねだい", "stationRomaji": "Shirokanedai" }, { "stationName": "白金高輪", "stationReading": "しろかねたかなわ", "stationRomaji": "Shirokane-takanawa" }, { "stationName": "麻布十番", "stationReading": "あざぶじゅうばん", "stationRomaji": "Azabu-jūban" }, { "stationName": "六本木一丁目", "stationReading": "ろっぽんぎいっちょうめ", "stationRomaji": "Roppongi-itchōme" }, { "stationName": "溜池山王", "stationReading": "ためいけさんのう", "stationRomaji": "Tameike-sannō" }, { "stationName": "永田町", "stationReading": "ながたちょう", "stationRomaji": "Nagatachō" }, { "stationName": "四ツ谷", "stationReading": "よつや", "stationRomaji": "Yotsuya" }, { "stationName": "市ケ谷", "stationReading": "いちがや", "stationRomaji": "Ichigaya" }, { "stationName": "飯田橋", "stationReading": "いいだばし", "stationRomaji": "Iidabashi" }, { "stationName": "後楽園", "stationReading": "こうらくえん", "stationRomaji": "Kōrakuen" }, { "stationName": "東大前", "stationReading": "とうだいまえ", "stationRomaji": "Tōdaimae" }, { "stationName": "本駒込", "stationReading": "ほんこまごめ", "stationRomaji": "Hon-komagome" }, { "stationName": "駒込", "stationReading": "こまごめ", "stationRomaji": "Komagome" }, { "stationName": "西ケ原", "stationReading": "にしがはら", "stationRomaji": "Nishigahara" }, { "stationName": "王子", "stationReading": "おうじ", "stationRomaji": "Ōji" }, { "stationName": "王子神谷", "stationReading": "おうじかみや", "stationRomaji": "Ōji-kamiya" }, { "stationName": "志茂", "stationReading": "しも", "stationRomaji": "Shimo" }, { "stationName": "赤羽岩淵", "stationReading": "あかばねいわぶち", "stationRomaji": "Akabane-iwabuchi" }
+    ]
+  },
+  {
+    "lineName": "東京メトロ副都心線",
+    "lineId": "tokyometro-fukutoshin",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#bb641d",
+    "textColor": "#FFFFFF",
+    "isLoopLine": false,
+    "designType": "metro",
+    "stations": [
+        { "stationName": "地下鉄成増", "stationReading": "ちかてつなります", "stationRomaji": "Chikatetsu-Narimasu" }, { "stationName": "地下鉄赤塚", "stationReading": "ちかてつあかつか", "stationRomaji": "Chikatetsu-Akatsuka" }, { "stationName": "平和台", "stationReading": "へいわだい", "stationRomaji": "Heiwadai" }, { "stationName": "氷川台", "stationReading": "ひかわだい", "stationRomaji": "Hikawadai" }, { "stationName": "小竹向原", "stationReading": "こたけむかいはら", "stationRomaji": "Kotake-Mukaihara" }, { "stationName": "千川", "stationReading": "せんかわ", "stationRomaji": "Senkawa" }, { "stationName": "要町", "stationReading": "かなめちょう", "stationRomaji": "Kanamachō" }, { "stationName": "池袋", "stationReading": "いけぶくろ", "stationRomaji": "Ikebukuro" }, { "stationName": "雑司が谷", "stationReading": "ぞうしがや", "stationRomaji": "Zōshigaya" }, { "stationName": "西早稲田", "stationReading": "にしわせだ", "stationRomaji": "Nishi-Waseda" }, { "stationName": "東新宿", "stationReading": "ひがししんじゅく", "stationRomaji": "Higashi-Shinjuku" }, { "stationName": "新宿三丁目", "stationReading": "しんじゅくさんちょうめ", "stationRomaji": "Shinjuku-sanchōme" }, { "stationName": "北参道", "stationReading": "きたさんどう", "stationRomaji": "Kitasandō" }, { "stationName": "明治神宮前", "stationReading": "めいじじんぐうまえ", "stationRomaji": "Meiji-jingūmae" }, { "stationName": "渋谷", "stationReading": "しぶや", "stationRomaji": "Shibuya" }
+    ]
+  },
+  {
+    "lineName": "都営浅草線",
+    "lineId": "toei-asakusa",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#f04a4d",
+    "textColor": "#FFFFFF",
+    "isLoopLine": false,
+    "designType": "metro",
+    "stations": [
+        { "stationName": "西馬込", "stationReading": "にしめごめ", "stationRomaji": "Nishi-magome" }, { "stationName": "馬込", "stationReading": "まごめ", "stationRomaji": "Magome" }, { "stationName": "中延", "stationReading": "なかのぶ", "stationRomaji": "Nakanobu" }, { "stationName": "戸越", "stationReading": "とごし", "stationRomaji": "Togoshi" }, { "stationName": "五反田", "stationReading": "ごたんだ", "stationRomaji": "Gotanda" }, { "stationName": "高輪台", "stationReading": "たかなわだい", "stationRomaji": "Takanawadai" }, { "stationName": "泉岳寺", "stationReading": "せんがくじ", "stationRomaji": "Sengakuji" }, { "stationName": "三田", "stationReading": "みた", "stationRomaji": "Mita" }, { "stationName": "大門", "stationReading": "だいもん", "stationRomaji": "Daimon" }, { "stationName": "新橋", "stationReading": "しんばし", "stationRomaji": "Shimbashi" }, { "stationName": "東銀座", "stationReading": "ひがしぎんざ", "stationRomaji": "Higashi-ginza" }, { "stationName": "宝町", "stationReading": "たからちょう", "stationRomaji": "Takarachō" }, { "stationName": "日本橋", "stationReading": "にほんばし", "stationRomaji": "Nihombashi" }, { "stationName": "人形町", "stationReading": "にんぎょうちょう", "stationRomaji": "Ningyōchō" }, { "stationName": "東日本橋", "stationReading": "ひがしにほんばし", "stationRomaji": "Higashi-Nihombashi" }, { "stationName": "浅草橋", "stationReading": "あさくさばし", "stationRomaji": "Asakusabashi" }, { "stationName": "蔵前", "stationReading": "くらまえ", "stationRomaji": "Kuramae" }, { "stationName": "浅草", "stationReading": "あさくさ", "stationRomaji": "Asakusa" }, { "stationName": "本所吾妻橋", "stationReading": "ほんじょあづまばし", "stationRomaji": "Honjo-azumabashi" }, { "stationName": "押上", "stationReading": "おしあげ", "stationRomaji": "Oshiage" }
+    ]
+  },
+  {
+    "lineName": "都営三田線",
+    "lineId": "toei-mita",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#0079c2",
+    "textColor": "#FFFFFF",
+    "isLoopLine": false,
+    "designType": "metro",
+    "stations": [
+        { "stationName": "目黒", "stationReading": "めぐろ", "stationRomaji": "Meguro" }, { "stationName": "白金台", "stationReading": "しろかねだい", "stationRomaji": "Shirokanedai" }, { "stationName": "白金高輪", "stationReading": "しろかねたかなわ", "stationRomaji": "Shirokane-takanawa" }, { "stationName": "三田", "stationReading": "みた", "stationRomaji": "Mita" }, { "stationName": "芝公園", "stationReading": "しばこうえん", "stationRomaji": "Shiba-kōen" }, { "stationName": "御成門", "stationReading": "おなりもん", "stationRomaji": "Onarimon" }, { "stationName": "内幸町", "stationReading": "うちさいわいちょう", "stationRomaji": "Uchisaiwaichō" }, { "stationName": "日比谷", "stationReading": "ひびや", "stationRomaji": "Hibiya" }, { "stationName": "大手町", "stationReading": "おおてまち", "stationRomaji": "Ōtemachi" }, { "stationName": "神保町", "stationReading": "じんぼうちょう", "stationRomaji": "Jimbōchō" }, { "stationName": "水道橋", "stationReading": "すいどうばし", "stationRomaji": "Suidōbashi" }, { "stationName": "春日", "stationReading": "かすが", "stationRomaji": "Kasuga" }, { "stationName": "白山", "stationReading": "はくさん", "stationRomaji": "Hakusan" }, { "stationName": "千石", "stationReading": "せんごく", "stationRomaji": "Sengoku" }, { "stationName": "巣鴨", "stationReading": "すがも", "stationRomaji": "Sugamo" }, { "stationName": "西巣鴨", "stationReading": "にしすこ", "stationRomaji": "Nishi-Sugamo" }, { "stationName": "新板橋", "stationReading": "しんいたばし", "stationRomaji": "Shin-Itabashi" }, { "stationName": "板橋区役所前", "stationReading": "いたばしくやくしょまえ", "stationRomaji": "Itabashi-kuyakushomae" }, { "stationName": "板橋本町", "stationReading": "いたばしほんちょう", "stationRomaji": "Itabashi-honchō" }, { "stationName": "本蓮沼", "stationReading": "もとはすぬま", "stationRomaji": "Motohasunuma" }, { "stationName": "志村坂上", "stationReading": "しむらさかうえ", "stationRomaji": "Shimura-sakaue" }, { "stationName": "志村三丁目", "stationReading": "しむらさんちょうめ", "stationRomaji": "Shimura-sanchōme" }, { "stationName": "蓮根", "stationReading": "はすね", "stationRomaji": "Hasune" }, { "stationName": "西台", "stationReading": "にしだい", "stationRomaji": "Nishidai" }, { "stationName": "高島平", "stationReading": "たかしまだいら", "stationRomaji": "Takashimadaira" }, { "stationName": "新高島平", "stationReading": "しんたかしまだいら", "stationRomaji": "Shin-Takashimadaira" }, { "stationName": "西高島平", "stationReading": "にしたかしまだいら", "stationRomaji": "Nishi-Takashimadaira" }
+    ]
+  },
+  {
+    "lineName": "都営新宿線",
+    "lineId": "toei-shinjuku",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#6cbb5a",
+    "textColor": "#000000",
+    "isLoopLine": false,
+    "designType": "metro",
+    "stations": [
+        { "stationName": "新宿", "stationReading": "しんじゅく", "stationRomaji": "Shinjuku" }, { "stationName": "新宿三丁目", "stationReading": "しんじゅくさんちょうめ", "stationRomaji": "Shinjuku-sanchōme" }, { "stationName": "曙橋", "stationReading": "あけぼのばし", "stationRomaji": "Akebonobashi" }, { "stationName": "市ケ谷", "stationReading": "いちがや", "stationRomaji": "Ichigaya" }, { "stationName": "九段下", "stationReading": "くだんした", "stationRomaji": "Kudanshita" }, { "stationName": "神保町", "stationReading": "じんぼうちょう", "stationRomaji": "Jimbōchō" }, { "stationName": "小川町", "stationReading": "おがわまち", "stationRomaji": "Ogawamachi" }, { "stationName": "岩本町", "stationReading": "いわもとちょう", "stationRomaji": "Iwamotochō" }, { "stationName": "馬喰横山", "stationReading": "ばくろよこやま", "stationRomaji": "Bakuro-yokoyama" }, { "stationName": "浜町", "stationReading": "はまちょう", "stationRomaji": "Hamachō" }, { "stationName": "森下", "stationReading": "もりした", "stationRomaji": "Morishita" }, { "stationName": "菊川", "stationReading": "きくかわ", "stationRomaji": "Kikukawa" }, { "stationName": "住吉", "stationReading": "すみよし", "stationRomaji": "Sumiyoshi" }, { "stationName": "西大島", "stationReading": "にしおおじま", "stationRomaji": "Nishi-ōjima" }, { "stationName": "大島", "stationReading": "おおじま", "stationRomaji": "Ōjima" }, { "stationName": "東大島", "stationReading": "ひがしおおじま", "stationRomaji": "Higashi-ōjima" }, { "stationName": "船堀", "stationReading": "ふなぼり", "stationRomaji": "Funabori" }, { "stationName": "一之江", "stationReading": "いちのえ", "stationRomaji": "Ichinoe" }, { "stationName": "瑞江", "stationReading": "みずえ", "stationRomaji": "Mizue" }, { "stationName": "篠崎", "stationReading": "しのざき", "stationRomaji": "Shinozaki" }
+    ]
+  },
+  {
+    "lineName": "都営大江戸線",
+    "lineId": "toei-oedo",
+    "imageFile": "tokyo-metro_map.png",
+    "lineColor": "#b6007a",
+    "textColor": "#FFFFFF",
+    "isLoopLine": true,
+    "designType": "metro",
+    "stations": [
+        { "stationName": "都庁前", "stationReading": "とちょうまえ", "stationRomaji": "Tochōmae" }, { "stationName": "新宿西口", "stationReading": "しんじゅくにしぐち", "stationRomaji": "Shinjuku-Nishiguchi" }, { "stationName": "東新宿", "stationReading": "ひがししんじゅく", "stationRomaji": "Higashi-Shinjuku" }, { "stationName": "若松河田", "stationReading": "わかまつかわだ", "stationRomaji": "Wakamatsu-Kawada" }, { "stationName": "牛込柳町", "stationReading": "うしごめやなぎちょう", "stationRomaji": "Ushigome-Yanagichō" }, { "stationName": "牛込神楽坂", "stationReading": "うしごめかぐらざか", "stationRomaji": "Ushigome-Kagurazaka" }, { "stationName": "飯田橋", "stationReading": "いいだばし", "stationRomaji": "Iidabashi" }, { "stationName": "春日", "stationReading": "かすが", "stationRomaji": "Kasuga" }, { "stationName": "本郷三丁目", "stationReading": "ほんごうさんちょうめ", "stationRomaji": "Hongō-sanchōme" }, { "stationName": "上野御徒町", "stationReading": "うえのおかちまち", "stationRomaji": "Ueno-Okachimachi" }, { "stationName": "新御徒町", "stationReading": "しんおかちまち", "stationRomaji": "Shin-Okachimachi" }, { "stationName": "蔵前", "stationReading": "くらまえ", "stationRomaji": "Kuramae" }, { "stationName": "両国", "stationReading": "りょうごく", "stationRomaji": "Ryōgoku" }, { "stationName": "森下", "stationReading": "もりした", "stationRomaji": "Morishita" }, { "stationName": "清澄白河", "stationReading": "きよすみしらかわ", "stationRomaji": "Kiyosumi-shirakawa" }, { "stationName": "門前仲町", "stationReading": "もんぜんなかちょう", "stationRomaji": "Monzen-Nakachō" }, { "stationName": "月島", "stationReading": "つきしま", "stationRomaji": "Tsukishima" }, { "stationName": "勝どき", "stationReading": "かちどき", "stationRomaji": "Kachidoki" }, { "stationName": "築地市場", "stationReading": "つきじしじょう", "stationRomaji": "Tsukijishijō" }, { "stationName": "汐留", "stationReading": "しおどめ", "stationRomaji": "Shiodome" }, { "stationName": "大門", "stationReading": "だいもん", "stationRomaji": "Daimon" }, { "stationName": "赤羽橋", "stationReading": "あかばねばし", "stationRomaji": "Akabanebashi" }, { "stationName": "麻布十番", "stationReading": "あざぶじゅうばん", "stationRomaji": "Azabu-jūban" }, { "stationName": "六本木", "stationReading": "ろっぽんぎ", "stationRomaji": "Roppongi" }, { "stationName": "青山一丁目", "stationReading": "あおやまいっちょうめ", "stationRomaji": "Aoyama-itchōme" }, { "stationName": "国立競技場", "stationReading": "こくりつきょうぎじょう", "stationRomaji": "Kokuritsu-Kyōgijō" }, { "stationName": "代々木", "stationReading": "よよぎ", "stationRomaji": "Yoyogi" }, { "stationName": "新宿", "stationReading": "しんじゅく", "stationRomaji": "Shinjuku" }, { "stationName": "西新宿五丁目", "stationReading": "にししんじゅくごちょうめ", "stationRomaji": "Nishi-Shinjuku-gochōme" }, { "stationName": "中野坂上", "stationReading": "なかのさかうえ", "stationRomaji": "Nakano-sakaue" }, { "stationName": "東中野", "stationReading": "ひがしなかの", "stationRomaji": "Higashi-Nakano" }, { "stationName": "中井", "stationReading": "なかい", "stationRomaji": "Nakai" }, { "stationName": "落合南長崎", "stationReading": "おちあいみなみながさき", "stationRomaji": "Ochiai-Minami-Nagasaki" }, { "stationName": "新江古田", "stationReading": "しんえごた", "stationRomaji": "Shin-Egota" }, { "stationName": "練馬", "stationReading": "ねりま", "stationRomaji": "Nerima" }, { "stationName": "豊島園", "stationReading": "としまえん", "stationRomaji": "Toshimaen" }, { "stationName": "練馬春日町", "stationReading": "ねりまかすがちょう", "stationRomaji": "Nerima-Kasugachō" }, { "stationName": "光が丘", "stationReading": "ひかりがおか", "stationRomaji": "Hikarigaoka" }
     ]
   }
 ]

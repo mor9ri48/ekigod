@@ -1,86 +1,142 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // DOM要素の取得
-    const lineFilter = document.getElementById('line-filter');
-    const spinButton = document.getElementById('spin-button');
-    const spinAgainButton = document.getElementById('spin-again-button');
-    const settingsView = document.getElementById('settings-view');
-    const resultView = document.getElementById('result-view');
-    const stationNameEl = document.getElementById('station-name');
-    const routemapImageEl = document.getElementById('routemap-image');
-
+    const appContainer = document.getElementById('app-container');
     let allLinesData = [];
+    let allStationsPool = []; // 全ての駅を保持する配列
 
-    // 1. JSONデータを読み込み、フィルターをセットアップする
-    fetch('data/stations.json') // 修正点: ファイル名を 'stations.json' に変更
-        .then(response => response.json())
-        .then(data => {
-            allLinesData = data;
-            // 路線フィルターのセレクトボックスを生成
-            allLinesData.forEach(line => {
-                const option = document.createElement('option');
-                option.value = line.lineId;
-                option.textContent = line.lineName;
-                lineFilter.appendChild(option);
-            });
-        })
-        .catch(error => {
-            console.error('駅データの読み込みに失敗しました:', error);
-            alert('駅データの読み込みに失敗しました。');
-        });
+    // main.js の startRoulette と renderResult 関数を以下のように修正・差し替え
 
-    // 2. 「ルーレットを回す！」ボタンのイベント
-    spinButton.addEventListener('click', () => {
-        const selectedLineId = lineFilter.value;
-        let stationPool = [];
-        let selectedLineInfo = null;
-
-        if (selectedLineId === 'all') {
-            // 「すべての路線から」選択時
-            allLinesData.forEach(line => {
-                line.stations.forEach(station => {
-                    stationPool.push({ ...station, lineInfo: line });
-                });
-            });
-        } else {
-            // 特定の路線を選択時
-            selectedLineInfo = allLinesData.find(line => line.lineId === selectedLineId);
-            if (selectedLineInfo) {
-                stationPool = selectedLineInfo.stations.map(station => ({ ...station, lineInfo: selectedLineInfo }));
-            }
-        }
-        
-        if (stationPool.length === 0) {
+    function startRoulette() {
+        if (allStationsPool.length === 0) {
             alert('対象となる駅がありません。');
             return;
         }
 
-        // 抽選実行
-        const randomIndex = Math.floor(Math.random() * stationPool.length);
-        const selectedStation = stationPool[randomIndex];
-        
-        // 結果表示
-        displayResult(selectedStation);
-    });
-    
-    // 3. 結果を表示する関数
-    function displayResult(stationData) {
-        // 表示を切り替え
-        settingsView.classList.add('hidden');
-        resultView.classList.remove('hidden');
+        const resultArea = document.getElementById('result-area');
+        const DURATION = 2500;
+        const INTERVAL = 75;
 
-        // 駅名と読みがなを表示
-        stationNameEl.textContent = `${stationData.stationName} (${stationData.stationReading})`;
-        
-        // 路線図画像を表示
-        const imagePath = `images/${stationData.lineInfo.imageFile}`;
-        routemapImageEl.src = imagePath;
-        routemapImageEl.alt = `${stationData.lineInfo.lineName} 路線図`;
+        // ★修正点1: アニメーション中は常に「waiting-design」クラスを使用
+        resultArea.innerHTML = `
+            <div id="station-sign-container" class="station-sign waiting-design is-rouletting">
+                <div class="station-name-main">
+                    <div class="kanji-name"></div>
+                    <div class="hiragana-name"></div>
+                </div>
+                <div class="line-bar">
+                    <div class="romaji-name"></div>
+                </div>
+                <div class="adjacent-stations"></div>
+            </div>
+            <button id="spin-again-button" style="display: none;">もう一度！</button>
+        `;
+
+        const kanjiEl = document.querySelector('.kanji-name');
+        const hiraganaEl = document.querySelector('.hiragana-name');
+        const lineBarEl = document.querySelector('.line-bar');
+
+        const rouletteTimer = setInterval(() => {
+            const tempStation = allStationsPool[Math.floor(Math.random() * allStationsPool.length)];
+            
+            // アニメーション中はデザインタイプを変更せず、中身だけ更新する
+            kanjiEl.textContent = tempStation.stationName;
+            hiraganaEl.textContent = tempStation.stationReading;
+            lineBarEl.style.backgroundColor = tempStation.lineInfo.lineColor;
+            lineBarEl.style.color = tempStation.lineInfo.textColor;
+        }, INTERVAL);
+
+
+        setTimeout(() => {
+            clearInterval(rouletteTimer);
+
+            const randomLineIndex = Math.floor(Math.random() * allLinesData.length);
+            const selectedLine = allLinesData[randomLineIndex];
+            const randomStationIndex = Math.floor(Math.random() * selectedLine.stations.length);
+            const currentStation = selectedLine.stations[randomStationIndex];
+
+            let prevStation = null;
+            let nextStation = null;
+            const stationCount = selectedLine.stations.length;
+
+            if (selectedLine.isLoopLine) {
+                prevStation = selectedLine.stations[(randomStationIndex - 1 + stationCount) % stationCount];
+                nextStation = selectedLine.stations[(randomStationIndex + 1) % stationCount];
+            } else {
+                if (randomStationIndex > 0) prevStation = selectedLine.stations[randomStationIndex - 1];
+                if (randomStationIndex < stationCount - 1) nextStation = selectedLine.stations[randomStationIndex + 1];
+            }
+            
+            const finalData = {
+                current: currentStation,
+                prev: prevStation,
+                next: nextStation,
+                line: selectedLine
+            };
+
+            renderResult(finalData);
+        }, DURATION);
     }
 
-    // 4. 「もう一度回す」ボタンのイベント
-    spinAgainButton.addEventListener('click', () => {
-        // 表示を元に戻す
-        resultView.classList.add('hidden');
-        settingsView.classList.remove('hidden');
-    });
+    function renderInitialView() {
+        appContainer.innerHTML = `
+            <div id="control-area">
+                <button id="random-button">神の啓示を待つ（駅を選ぶ）</button>
+            </div>
+            <div id="result-area"></div>
+        `;
+        const randomButton = document.getElementById('random-button');
+        randomButton.addEventListener('click', startRoulette);
+    }
+    
+    function renderResult(data) {
+        const resultArea = document.getElementById('result-area');
+        
+        const prevStationHTML = data.prev ? `<div class="prev-station"><div class="station-kanji">${data.prev.stationName}</div><div class="station-romaji">${data.prev.stationRomaji}</div></div>` : '<div></div>';
+        const nextStationHTML = data.next ? `<div class="next-station"><div class="station-kanji">${data.next.stationName}</div><div class="station-romaji">${data.next.stationRomaji}</div></div>` : '<div></div>';
+
+        resultArea.innerHTML = `
+            <div class="station-sign ${data.line.designType}">
+                <div class="station-name-main">
+                    <div class="kanji-name">${data.current.stationName}</div>
+                    <div class="hiragana-name">${data.current.stationReading}</div>
+                </div>
+                <div class="line-bar" style="background-color: ${data.line.lineColor}; color: ${data.line.textColor};">
+                    <div class="romaji-name">${data.current.stationRomaji}</div>
+                </div>
+                <div class="adjacent-stations">
+                    ${prevStationHTML}
+                    ${nextStationHTML}
+                </div>
+            </div>
+            <div><button id="spin-again-button">神頼みする</button></div>
+        `;
+
+        const lineBarEl = document.querySelector('.line-bar');
+        if (lineBarEl) {
+            lineBarEl.style.setProperty('--line-color', data.line.lineColor);
+        }
+        
+        const spinAgainButton = document.getElementById('spin-again-button');
+        spinAgainButton.addEventListener('click', startRoulette);
+    }
+
+    async function initializeApp() {
+        try {
+            const response = await fetch('data/stations.json');
+            allLinesData = await response.json();
+
+            // 抽選候補となる全駅のプールを作成
+            allLinesData.forEach(line => {
+                line.stations.forEach(station => {
+                    allStationsPool.push({ ...station, lineInfo: line });
+                });
+            });
+
+            renderInitialView();
+        } catch (error) {
+            console.error('駅データの読み込みに失敗しました:', error);
+            appContainer.innerHTML = `<p style="color: red;">エラー: 駅データの読み込みに失敗しました。stations.jsonファイルを確認してください。</p>`;
+        }
+    }
+
+    initializeApp();
 });
