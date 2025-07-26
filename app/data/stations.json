@@ -1,0 +1,63 @@
+[
+  {
+    "lineName": "JR山手線",
+    "lineId": "yamanote",
+    "imageFile": "yamanote.png",
+    "stations": [
+      { "stationName": "東京", "stationReading": "とうきょう" },
+      { "stationName": "神田", "stationReading": "かんだ" },
+      { "stationName": "秋葉原", "stationReading": "あきはばら" },
+      { "stationName": "御徒町", "stationReading": "おかちまち" },
+      { "stationName": "上野", "stationReading": "うえの" },
+      { "stationName": "鶯谷", "stationReading": "うぐいすだに" },
+      { "stationName": "日暮里", "stationReading": "にっぽり" },
+      { "stationName": "西日暮里", "stationReading": "にしにっぽり" },
+      { "stationName": "田端", "stationReading": "たばた" },
+      { "stationName": "駒込", "stationReading": "こまごめ" },
+      { "stationName": "巣鴨", "stationReading": "すがも" },
+      { "stationName": "大塚", "stationReading": "おおつか" },
+      { "stationName": "池袋", "stationReading": "いけぶくろ" },
+      { "stationName": "目白", "stationReading": "めじろ" },
+      { "stationName": "高田馬場", "stationReading": "たかだのばば" },
+      { "stationName": "新大久保", "stationReading": "しんおおくぼ" },
+      { "stationName": "新宿", "stationReading": "しんじゅく" },
+      { "stationName": "代々木", "stationReading": "よよぎ" },
+      { "stationName": "原宿", "stationReading": "はらじゅく" },
+      { "stationName": "渋谷", "stationReading": "しぶや" },
+      { "stationName": "恵比寿", "stationReading": "えびす" },
+      { "stationName": "目黒", "stationReading": "めぐろ" },
+      { "stationName": "五反田", "stationReading": "ごたんだ" },
+      { "stationName": "大崎", "stationReading": "おおさき" },
+      { "stationName": "品川", "stationReading": "しながわ" },
+      { "stationName": "高輪ゲートウェイ", "stationReading": "たかなわゲートウェイ" },
+      { "stationName": "田町", "stationReading": "たまち" },
+      { "stationName": "浜松町", "stationReading": "はままつちょう" },
+      { "stationName": "新橋", "stationReading": "しんばし" },
+      { "stationName": "有楽町", "stationReading": "ゆうらくちょう" }
+    ]
+  },
+  {
+    "lineName": "京王井の頭線",
+    "lineId": "keio-inokashira",
+    "imageFile": "keio-inokashira.png",
+    "stations": [
+      { "stationName": "渋谷", "stationReading": "しぶや" },
+      { "stationName": "神泉", "stationReading": "しんせん" },
+      { "stationName": "駒場東大前", "stationReading": "こまばとうだいまえ" },
+      { "stationName": "池ノ上", "stationReading": "いけのうえ" },
+      { "stationName": "下北沢", "stationReading": "しもきたざわ" },
+      { "stationName": "新代田", "stationReading": "しんだいた" },
+      { "stationName": "東松原", "stationReading": "ひがしまつばら" },
+      { "stationName": "明大前", "stationReading": "めいだいまえ" },
+      { "stationName": "永福町", "stationReading": "えいふくちょう" },
+      { "stationName": "西永福", "stationReading": "にしえいふく" },
+      { "stationName": "浜田山", "stationReading": "はまだやま" },
+      { "stationName": "高井戸", "stationReading": "たかいど" },
+      { "stationName": "富士見ヶ丘", "stationReading": "ふじみがおか" },
+      { "stationName": "久我山", "stationReading": "くがやま" },
+      { "stationName": "三鷹台", "stationReading": "みたかだい" },
+      { "stationName": "井の頭公園", "stationReading": "いのかしらこうえん" },
+      { "stationName": "吉祥寺", "stationReading": "きちじょうじ" }
+    ]
+  }
+]
