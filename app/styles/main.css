@@ -1,126 +1,58 @@
-/* Google FontsからNoto Sans JPをインポート */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+/* Google Fontsから Noto Serif JP (明朝体) と Oswald（英字用）をインポート */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Oswald:wght@500&display=swap');
 
-/* 基本スタイル */
+/* === 全体スタイル（厳かな感じ） === */
+:root {
+    --header-color: #ffffff;
+    --text-color: #0d121a;
+    --accent-color: #D4AF37;
+}
 body {
-    /* Noto Sans JPを基本フォントに設定 */
-    font-family: 'Noto Sans JP', sans-serif;
-    line-height: 1.7;
+    font-family: 'Noto Serif JP', serif; /* 基本フォントを明朝体に */
+    background-color: #0d121a;
+    background-image: radial-gradient(ellipse at top, rgba(100, 110, 130, 0.3), transparent 60%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: var(--text-color);
+    line-height: 1.8;
     margin: 0;
     padding: 20px;
-    background-color: #fdfaf4;
-    color: #4a4a4a;
+    min-height: 100vh;
+}
+body h3 {
+    font-size: 1.6em;
+    color: #eee;
+    font-weight: 700;
+    text-align: center;
+    margin: 30px 0 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 .container {
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
-    background-color: #ffffff;
+    background-color: rgba(30, 35, 45, 0.8);
+    backdrop-filter: blur(10px);
     padding: 25px 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border: 1px solid #eee;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
-header {
-    text-align: center;
-    border-bottom: 2px solid #e0e0e0;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-}
-h1 {
-    font-size: 2em;
-    color: #2c3e50;
-    margin: 0;
+header h1 {
+    font-size: 2.2em;
+    color: var(--header-color);
     font-weight: 700;
-}
-
-/* ボタンと結果エリアのスタイル */
-#control-area {
     text-align: center;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
-button {
-    padding: 15px 30px;
-    font-size: 1.3em;
-    font-weight: bold;
-    color: #fff;
-    background-color: #e67e22;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: 'Noto Sans JP', sans-serif; /* ボタンにもフォントを適用 */
-}
-#result-area {
-    margin-top: 20px;
-}
-
-/* === 駅名標のデザイン ここから === */
-
-/* --- 全デザイン共通のベース --- */
-.station-sign {
-    background-color: #fff;
-    padding: 10px 15px;
-    text-align: center;
-    transition: all 0.3s ease; /* 枠組みの切り替わりをスムーズに */
-    border-radius: 4px;
-    min-height: 230px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-/* ... (kanji-name, hiragana-nameなどの他のベーススタイルは変更なし) ... */
-.station-name-main { margin-bottom: 5px; }
-.kanji-name { font-size: 3.8em; font-weight: 900; line-height: 1.1; letter-spacing: 2px; }
-.hiragana-name { font-size: 1.2em; font-weight: 500; }
-.line-bar { padding: 5px 0; margin-bottom: 5px; display: flex; align-items: center; justify-content: space-between; }
-.line-bar::after { content: '→'; font-size: 1.8em; font-weight: bold; }
-.romaji-name { font-size: 1.5em; font-weight: 700; padding-left: 15px; }
-.adjacent-stations { display: flex; justify-content: space-between; font-size: 1em; padding: 5px; margin-top: auto; }
-.adjacent-stations .station-kanji { font-size: 1.4em; font-weight: 700; }
-.adjacent-stations .station-romaji { font-size: 0.8em; font-weight: 500; }
-.is-rouletting .kanji-name,
-.is-rouletting .hiragana-name {
-    filter: blur(2px);
-    opacity: 0.8;
-}
-
-/* --- 待機中デザイン (.waiting-design) --- */
-.station-sign.waiting-design {
-    border: 3px dashed #ccc; /* 点線のシンプルな枠 */
-}
-.station-sign.waiting-design .adjacent-stations {
-    display: none; /* 待機中は隣の駅を表示しない */
-}
-
-/* --- JR東日本風 (.jr) --- */
-.station-sign.jr {
-    border: 3px solid #333;
-}
-
-/* --- 東京メトロ・都営風 (.metro) --- */
-.station-sign.metro {
-    border: 1px solid #999;
-    border-top: 10px solid #00529B;
-    border-radius: 6px;
-}
-.station-sign.metro .kanji-name { font-weight: 700; }
-.station-sign.metro .hiragana-name,
-.station-sign.metro .romaji-name { font-family: sans-serif; }
-.station-sign.metro .line-bar {
-    border-radius: 999px;
-    padding: 2px 10px;
-    margin: 10px 5px;
-}
-.station-sign.metro .romaji-name { font-size: 1.2em; padding-left: 5px; }
-.station-sign.metro .line-bar::after { font-size: 1.5em; }
-.station-sign.metro .adjacent-stations { display: none; }
-
-/* === 駅名標のデザイン ここまで === */
-
 #initial-routemap-container {
     margin-bottom: 25px;
     text-align: center;
 }
-
 #initial-routemap-container img {
     max-width: 100%;
     height: auto;
@@ -129,14 +61,150 @@ button {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* === ボタン（厳かな感じ） === */
+#control-area {
+    text-align: center;
+}
+button {
+    padding: 12px 30px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--accent-color);
+    background-color: #fff;
+    border: 2px solid var(--accent-color);
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all 0.2s ease;
+}
+button:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
 #spin-again-button {
+    display: block;
+    margin: 30px auto 0;
+    max-width: 300px;
+    background-color: #666;
+    border-color: #666;
+    color: #fff;
+}
+#spin-again-button:hover {
+    background-color: #333;
+    border-color: #333;
+}
+#result-area {
     margin-top: 20px;
-    background-color: #27ae60;
 }
 
-#spin-again-button {
-    display: block; /* ブロック要素にする */
-    margin: 20px auto 0; /* 上下のマージンと、左右のマージンを自動に設定 */
-    max-width: 300px; /* ボタンの最大幅を指定 */
-    background-color: #27ae60;
+
+/* === 駅名標のデザイン ここから === */
+
+/* --- 全デザイン共通のベース --- */
+.station-sign {
+    background-color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 0.5s ease-out;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+.station-name-main { margin-bottom: 5px; }
+.kanji-name { font-size: 3.8em; line-height: 1.1; }
+.hiragana-name { font-size: 1.2em; }
+.romaji-name { font-family: 'Oswald', sans-serif; letter-spacing: 1px; }
+.adjacent-stations { display: flex; justify-content: space-between; align-items: center; font-size: 1em; padding: 10px 5px 0 5px; }
+.adjacent-stations .station-kanji { font-size: 1.4em; font-weight: 700; }
+.adjacent-stations .station-romaji { font-family: 'Oswald', sans-serif; font-size: 0.8em; }
+.adjacent-stations .arrow { font-size: 3em; color: #bdc3c7; }
+
+/* --- 待機中デザイン (.waiting-design) と アニメーション中のスタイル --- */
+.station-sign.waiting-design {
+    border: 3px dashed #ccc;
+}
+.station-sign.waiting-design .adjacent-stations {
+    display: none;
+}
+.is-rouletting {
+    border: 3px dashed var(--line-color, #ccc) !important;
+}
+.is-rouletting .kanji-name {
+    font-size: 3em;
+    filter: blur(3px);
+    opacity: 0.7;
+}
+.is-rouletting .hiragana-name,
+.is-rouletting .line-bar,
+.is-rouletting .adjacent-stations {
+    display: none;
+}
+
+/* --- JR東日本風 (.jr) --- */
+.station-sign.jr {
+    border: 3px solid var(--line-color, #333);
+    border-radius: 4px;
+}
+.station-sign.jr .kanji-name { font-weight: 900; color: #000; }
+.station-sign.jr .hiragana-name { font-weight: 500; color: #333; }
+.station-sign.jr .line-bar {
+    padding: 5px 0;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--line-color, #333);
+}
+.station-sign.jr .line-bar::after { content: '→'; font-size: 1.8em; font-weight: bold; }
+.station-sign.jr .romaji-name { font-size: 1.5em; font-weight: 500; padding-left: 15px; }
+.station-sign.jr .adjacent-stations { color: #333; }
+
+/* --- 東京メトロ・都営風 (.metro) --- */
+.station-sign.metro {
+    border: 1px solid #999;
+    border-top: 10px solid var(--line-color, #00529B);
+    border-radius: 6px;
+}
+.station-sign.metro .kanji-name { font-weight: 700; color: #000; }
+.station-sign.metro .hiragana-name,
+.station-sign.metro .romaji-name { font-family: sans-serif; }
+.station-sign.metro .line-bar {
+    border-radius: 999px;
+    padding: 2px 15px;
+    margin: 10px 5px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--line-color, #00529B);
+}
+.station-sign.metro .romaji-name { font-size: 1.2em; }
+.station-sign.metro .adjacent-stations { display: none; }
+
+.station-sign .line-name {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #888;
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+#result-routemap-container {
+    margin: 25px 0;
+    text-align: center;
+}
+
+#result-routemap-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
